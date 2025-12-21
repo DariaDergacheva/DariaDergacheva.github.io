@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Daria Dergacheva — Senior Research Consultant in platform governance, AI & digital regulation, and disinformation (Russia focus)." />
+  <title>Daria Dergacheva | Platform Governance, AI Regulation & Disinformation</title>
+  <style>
+    :root{
+      --bg:#0b0c0f;
+      --panel:#111319;
+      --text:#e8e9ee;
+      --muted:#b9bcc7;
+      --muted2:#8e92a3;
+      --line:#242738;
+      --chip:#1a1d2a;
+      --accent:#d6d7dd; /* intentionally neutral */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background: radial-gradient(1200px 700px at 15% -10%, rgba(255,255,255,.10), transparent 55%),
+                  radial-gradient(900px 600px at 85% 0%, rgba(255,255,255,.06), transparent 55%),
+                  var(--bg);
+      line-height:1.55;
+    }
+    a{color:var(--text); text-decoration:none}
+    a:hover{opacity:.9; text-decoration:underline}
+
+    /* Layout */
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(11,12,15,.72);
+      backdrop-filter:saturate(150%) blur(10px);
+      border-bottom:1px solid rgba(36,39,56,.7);
+    }
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .dot{width:10px; height:10px; border-radius:999px; background:var(--accent); box-shadow:0 0 0 4px rgba(214,215,221,.12)}
+    nav ul{list-style:none; display:flex; gap:14px; padding:0; margin:0; flex-wrap:wrap; justify-content:flex-end}
+    nav a{color:var(--muted); font-weight:600; font-size:14px}
+    nav a:hover{color:var(--text)}
+
+    /* Sections */
+    .hero{padding:34px 0 18px; display:grid; grid-template-columns: 1.3fr .7fr; gap:22px; align-items:start}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), transparent 65%), var(--panel); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .hero .card{padding:26px}
+    .kicker{font-family:var(--mono); font-size:12px; color:var(--muted2); letter-spacing:.18em; text-transform:uppercase}
+    h1{margin:10px 0 10px; font-size:38px; line-height:1.15; letter-spacing:-.02em}
+    .sub{margin:0; color:var(--muted); font-size:16px}
+    .pillrow{margin-top:16px; display:flex; flex-wrap:wrap; gap:10px}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:999px; background:rgba(26,29,42,.9); border:1px solid rgba(36,39,56,.9); color:var(--muted); font-size:13px}
+    .pill strong{color:var(--text); font-weight:700}
+
+    .cta{margin-top:18px; display:flex; flex-wrap:wrap; gap:10px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:10px 12px; border-radius:12px; border:1px solid var(--line); background:#0f1118; color:var(--text); font-weight:700; font-size:14px}
+    .btn:hover{transform:translateY(-1px); transition:.15s ease; text-decoration:none}
+    .btn.secondary{background:transparent; color:var(--muted)}
+
+    .side{padding:20px}
+    .side h3{margin:0 0 10px; font-size:14px; color:var(--muted); letter-spacing:.02em; text-transform:uppercase}
+    .kv{display:grid; grid-template-columns:110px 1fr; gap:10px 12px; font-size:14px}
+    .kv .k{color:var(--muted2)}
+    .kv .v{color:var(--text)}
+    .kv .v a{color:var(--text)}
+
+    section{margin-top:18px}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    .section-card{padding:18px 18px 16px}
+    .section-card h2{margin:0 0 8px; font-size:16px; letter-spacing:.02em}
+    .section-card p{margin:0 0 10px; color:var(--muted); font-size:14.5px}
+    .list{margin:0; padding-left:18px; color:var(--muted); font-size:14.5px}
+    .list li{margin:7px 0}
+
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{background:var(--chip); border:1px solid var(--line); color:var(--muted); border-radius:999px; padding:7px 10px; font-size:13px}
+
+    .split{display:grid; grid-template-columns: 1fr; gap:16px}
+    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+
+    /* Footer */
+    footer{margin-top:26px; padding-top:18px; border-top:1px solid rgba(36,39,56,.8); color:var(--muted2); font-size:13px}
+    footer a{color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr;}
+      .grid{grid-template-columns: 1fr;}
+      .two-col{grid-template-columns: 1fr;}
+      h1{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand"><span class="dot"></span> Daria Dergacheva</div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#services">Consulting</a></li>
+          <li><a href="#work">Selected work</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="card">
+        <div class="kicker">Senior Research Consultant</div>
+        <h1>Platform Governance, AI & Digital Regulation — with a Russia-focused disinformation specialty.</h1>
+        <p class="sub">
+          I help consultancies, policymakers, and technology stakeholders understand how adversarial information operations
+          interact with platform policies, AI-enabled moderation, and regulatory frameworks (e.g., the Digital Services Act).
+        </p>
+        <div class="pillrow" aria-label="Highlights">
+          <span class="pill"><strong>Remote-ready</strong> EU & International</span>
+          <span class="pill">DSA transparency & researcher data access</span>
+          <span class="pill">Misinformation / disinformation governance</span>
+          <span class="pill">AI moderation & GenAI governance</span>
+          <span class="pill">Computational + qualitative mixed methods</span>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/daria-dergacheva-32710310/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <aside class="card side" aria-label="Quick facts">
+        <h3>At a glance</h3>
+        <div class="kv">
+          <div class="k">Current</div><div class="v">Associated Researcher (Postdoc), ZeMKI — University of Bremen</div>
+          <div class="k">Focus</div><div class="v">Platform governance, AI regulation, disinformation (Russia)</div>
+          <div class="k">Methods</div><div class="v">APIs & large-scale social data, mixed methods, expert interviews</div>
+          <div class="k">Languages</div><div class="v">Russian (native), English (C2), Spanish (C1), German (basic)</div>
+          <div class="k">Email</div><div class="v"><a href="mailto:dergache@uni-bremen.de">dergache@uni-bremen.de</a><br/><a href="mailto:dergacheva@yahoo.com">dergacheva@yahoo.com</a></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about" class="grid">
+      <div class="card section-card">
+        <h2>About</h2>
+        <p>
+          I am an applied researcher and consultant at the Platform Governance, Media and Technology Lab (ZeMKI),
+          University of Bremen. My work sits at the intersection of platform governance, AI and content moderation,
+          and digital regulation. I also bring expert-level knowledge of Russian and post-Soviet information environments,
+          including state-aligned disinformation and platform manipulation.
+        </p>
+        <p>
+          I am currently seeking <strong>remote research and consultancy roles</strong> (EU & international), including contract-based engagements.
+        </p>
+        <div class="chips" aria-label="Keywords">
+          <span class="chip">DSA transparency</span>
+          <span class="chip">Researcher data access</span>
+          <span class="chip">AI moderation</span>
+          <span class="chip">GenAI governance</span>
+          <span class="chip">Disinformation (Russia)</span>
+          <span class="chip">Mixed methods</span>
+        </div>
+      </div>
+
+      <div class="card section-card" id="expertise">
+        <h2>Core expertise</h2>
+        <ul class="list">
+          <li><strong>Platform governance & regulation:</strong> transparency, accountability, systemic risks, and researcher access to data (DSA context).</li>
+          <li><strong>AI-enabled content moderation:</strong> automated moderation, overblocking, and governance of AI/GenAI in platform decision-making.</li>
+          <li><strong>Disinformation & influence operations:</strong> Russia-focused expertise; how state-aligned campaigns exploit platform policies and algorithms.</li>
+          <li><strong>Applied research delivery:</strong> policy briefs, consultation reports, presentations, and executive-ready synthesis.</li>
+          <li><strong>Methods:</strong> computational social science (APIs, large-scale social data) + qualitative research (in-depth interviews, coding tools).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="card section-card">
+      <h2>Consulting services</h2>
+      <p>Typical engagement formats (remote): short advisories, research sprints, and ongoing retained support.</p>
+      <div class="two-col">
+        <div>
+          <ul class="list">
+            <li><strong>Regulatory & policy analysis:</strong> DSA transparency, data access, and platform accountability.</li>
+            <li><strong>Risk & systemic impact assessments:</strong> content moderation, overblocking, and AI governance risks.</li>
+            <li><strong>Disinformation research briefs:</strong> Russia and post-Soviet influence ecosystems; platform exploitation patterns.</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="list">
+            <li><strong>Research design & methods:</strong> mixed-methods research design, API-based data collection, and analysis plans.</li>
+            <li><strong>Stakeholder presentations:</strong> concise executive decks and workshops for non-academic audiences.</li>
+            <li><strong>Evidence synthesis:</strong> translating academic literature and primary data into decision-ready recommendations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="grid">
+      <div class="card section-card">
+        <h2>Selected applied work</h2>
+        <ul class="list">
+          <li><strong>Platform Governance Archive (Project lead):</strong> day-to-day curation of a dataset of platform policies.</li>
+          <li><strong>DSA transparency database research:</strong> analysis of platform content decisions using the DSA Transparency Database (24h dataset study).</li>
+          <li><strong>Horizon 2020 — ReCreating Europe:</strong> mixed methods research using YouTube API and interviews with EU-based visual artists; contributed to policy recommendations.</li>
+          <li><strong>AI discourse longitudinal study:</strong> ten years of Twitter/X data in multiple languages; stakeholder mapping in AI discourse (US and Germany).</li>
+        </ul>
+      </div>
+
+      <div class="card section-card">
+        <h2>Teaching & leadership</h2>
+        <ul class="list">
+          <li>Lecturer (University of Bremen): AI and the media; platform governance; computational methods in communication science.</li>
+          <li>Co-curator of PhD program at ZeMKI (one of two curators).</li>
+          <li>Regional editor and researcher (Global Voices), leading teams of journalists and translators on tech and policy coverage.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publications" class="card section-card">
+      <h2>Selected publications & outputs</h2>
+      <p>Representative academic and policy work (full list available on request).</p>
+      <ul class="list">
+        <li><strong>Policy & Internet (2023):</strong> “Mandate to overblock? Understanding the impact of the EU’s Article 17 on copyright content moderation on YouTube.”</li>
+        <li><strong>Social Media + Society (2023):</strong> “We Learn Through Mistakes”: perspectives of creators on copyright moderation in the EU.</li>
+        <li><strong>SSRN (2023):</strong> “Improving Data Access for Researchers in the Digital Services Act.”</li>
+        <li><strong>Dataset (2023):</strong> Platform Governance Archive (PGA) v2; and DSA transparency database study (“One Day in Content Moderation”).</li>
+        <li><strong>Public analysis (2024):</strong> “2024 Russian Presidential Elections — How Digital Technologies Are Used to Wield Authoritarian Power” (Oxford Internet Institute).</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card section-card">
+      <h2>Contact</h2>
+      <p>
+        For remote consulting, research collaborations, or advisory work, please email me or connect on LinkedIn.
+      </p>
+      <ul class="list">
+        <li>Email (institutional): <a href="mailto:dergache@uni-bremen.de">dergache@uni-bremen.de</a></li>
+        <li>Email (private): <a href="mailto:dergacheva@yahoo.com">dergacheva@yahoo.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/daria-dergacheva-32710310/" target="_blank" rel="noopener">linkedin.com/in/daria-dergacheva-32710310/</a></li>
+      </ul>
+      <p style="margin-top:10px; color: var(--muted2); font-size: 13px;">
+        Note: This website intentionally does not include a phone number or home address.
+      </p>
+    </section>
+
+    <footer>
+      <div>
+        © <span id="y"></span> Daria Dergacheva. Built as a single-file site for easy hosting.
+      </div>
+      <div style="margin-top:6px;">
+        Quick deploy: upload this file to Netlify / GitHub Pages, or host it anywhere as <span style="font-family:var(--mono)">index.html</span>.
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
