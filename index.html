@@ -3,17 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dr.Daria Dergacheva</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <meta name="description" content="Researching platform & AI governance"/>
-=======
-  <meta name="description" content="Researching platform & AI governance" />
->>>>>>> 1d411ee091259aac72dad3426f8e5c632e9830c8
+  <title>Dr. Daria Dergacheva</title>
+  <meta name="description" content="I study platform & AI governance globally, focusing on disinformation and propaganda as systemic risks." />
 
-=======
-  <meta name="description" content="I study platform & AI governance globally. I focus on Disinformation and Propaganda as a systemic risk" />
->>>>>>> 22250dd937548272beb16aed38231233c9af9d01
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,9 +25,8 @@
       --shadow2: 0 4px 18px rgba(2, 6, 23, .08);
       --radius: 18px;
 
-      /* portfolio accent (subtle, not loud) */
+      /* subtle accent */
       --accent:#2f6fed;
-      --accent2:#7aa2ff;
 
       --font-ui: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       --font-head: "Source Serif 4", ui-serif, Georgia, "Times New Roman", serif;
@@ -81,39 +72,35 @@
       gap:14px;
       min-width: 280px;
     }
-.header-photo{
-  width: 112px;
-  height: 112px;
-  max-width: 112px;
-  max-height: 112px;
 
-  object-fit: cover;
-  object-position: 50% 30%;
+    /* Bigger photo */
+    .header-photo{
+      width: 112px;
+      height: 112px;
+      max-width: 112px;
+      max-height: 112px;
+      object-fit: cover;
+      object-position: 50% 30%;
+      border-radius: 50%;
+      filter: grayscale(100%) contrast(1.06);
+      border: 1px solid var(--border);
+      display: block;
+      flex-shrink: 0;
+      background:#f8fafc;
+    }
 
-  border-radius: 50%;
-  filter: grayscale(100%) contrast(1.06);
-  border: 1px solid var(--border);
-
-  display: block;
-  flex-shrink: 0;
-}
-@media (max-width: 600px){
-  .header-photo{
-    width: 80px;
-    height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-  }
     .title a{
       font-family: var(--font-head);
       font-weight: 700;
       font-size: 22px;
       letter-spacing: -0.01em;
       border-bottom:none;
+      display:inline-block;
     }
+
     .subtitle{
       color: var(--muted2);
-      font-size: 22px;
+      font-size: 14px;
       margin-top: 2px;
       white-space: nowrap;
       overflow: hidden;
@@ -124,9 +111,7 @@
     .nav{ display:flex; gap:14px; flex-wrap:wrap; }
     .nav a{ border-bottom:none; color:var(--muted); font-weight:600; font-size:14px; }
     .nav a:hover{ color:var(--fg); }
-    .nav a.primary{
-      color: var(--accent);
-    }
+    .nav a.primary{ color: var(--accent); }
 
     /* Typography */
     h1, h2, h3{
@@ -135,7 +120,13 @@
       margin: 0;
     }
     h1{ font-size: 42px; line-height:1.1; margin: 8px 0 12px; }
-    h2{ font-size: 24px; margin: 28px 0 12px; }
+    h2{
+      font-size: 26px;
+      margin: 34px 0 14px;
+      display:inline-block;
+      padding-bottom: 6px;
+      border-bottom: 3px solid rgba(47,111,237,.35); /* highlight headings */
+    }
     h3{ font-size: 18px; margin: 0 0 6px; }
     .muted{ color:var(--muted); }
     .small{ font-size: 14px; color: var(--muted2); }
@@ -156,53 +147,9 @@
       margin-top: 18px;
       align-items: stretch;
     }
+    .hero .card{ padding: 22px; }
 
-    .hero .card{
-      padding: 22px;
-    }
-
-    .cta-row{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top: 14px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border:1px solid rgba(203,213,225,.95);
-      background: rgba(255,255,255,.70);
-      box-shadow: var(--shadow2);
-      font-weight: 600;
-      font-size: 14px;
-      border-bottom: none;
-    }
-    .btn:hover{ border-color: rgba(148,163,184,.9); }
-    .btn.primary{
-      border-color: rgba(47,111,237,.35);
-      background: linear-gradient(180deg, rgba(47,111,237,.12), rgba(255,255,255,.65));
-    }
-
-    .pill{
-      display:inline-block;
-      border:1px solid rgba(203,213,225,.9);
-      background: rgba(248,250,252,.75);
-      border-radius: 999px;
-      padding: 6px 10px;
-      margin: 6px 8px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .kpi{
-      display:grid;
-      gap: 10px;
-    }
+    .kpi{ display:grid; gap: 10px; }
     .kpi .item{
       padding: 12px 12px;
       border:1px solid rgba(226,232,240,.9);
@@ -217,17 +164,13 @@
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
-
     .cards-3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
 
-    .list{
-      margin: 10px 0 0;
-      padding-left: 18px;
-    }
+    .list{ margin: 10px 0 0; padding-left: 18px; }
     .list li{ margin: 7px 0; }
 
     .tagline{
@@ -261,7 +204,12 @@
     @media (max-width: 600px){
       .site-header .wrap{ padding: 14px 18px; }
       .wrap{ padding: 18px; }
-      .header-photo{ width:48px; height:48px; }
+      .header-photo{
+        width: 80px;
+        height: 80px;
+        max-width: 80px;
+        max-height: 80px;
+      }
       .subtitle{ max-width: 260px; }
       h1{ font-size: 30px; }
     }
@@ -272,15 +220,12 @@
   <header class="site-header">
     <div class="wrap">
       <div class="header-profile">
-        <img class="header-photo" src="assets/images/profile.jpg" alt="Portrait photo" />    
+        <img class="header-photo" src="assets/images/profile.jpg" alt="Portrait photo" />
         <div class="title">
-          <a href="#top">Dr.Daria Dergacheva</a>
-<<<<<<< HEAD
-          <div class="subtitle">Researching platform & AI governance, Content moderation, Disinformation and Propaganda</div>
-=======
-          <div class="subtitle"> Platform & AI governance resercher </div>
->>>>>>> 22250dd937548272beb16aed38231233c9af9d01
+          <a href="#top">Dr. Daria Dergacheva</a>
+          <div class="subtitle">Platform &amp; AI governance · Content moderation · Disinformation &amp; propaganda</div>
         </div>
+      </div>
 
       <nav class="nav" aria-label="Site navigation">
         <a class="primary" href="#projects">Projects</a>
@@ -297,14 +242,11 @@
     <section id="about" class="hero">
       <div class="card">
         <p class="tagline">
-          I research how platforms and Generative AI models govern information and speech globally, and study algorithms and disinformation as a systemic risk. I am also interested in Transparency regulations, Researchers’ access to platform data and digital authoritarianism
+          I research how platforms and generative AI models govern information and speech globally, and study algorithms and disinformation as systemic risks. I am also interested in transparency regulation, researchers’ access to platform data, and digital authoritarianism.
         </p>
-      
-
         <p class="muted" style="margin:12px 0 0;">
           Associated researcher (postdoc), Platform Governance, Media and Technology Lab (PGMT), ZeMKI, University of Bremen.
         </p>
-
       </div>
 
       <div class="card">
@@ -350,16 +292,11 @@
           </p>
         </div>
       </div>
-
-      <p class="small" style="margin-top:10px;">
-        Tip: edit project titles/descriptions directly in this file under the <strong>Projects</strong> section.
-      </p>
     </section>
 
     <!-- PUBLICATIONS -->
     <section id="publications">
       <h2>Selected publications</h2>
-
       <div class="card">
         <ul class="list">
           <li><strong>Dergacheva, D., &amp; Katzenbach, C.</strong> (2023). Mandate to overblock? Understanding the impact of the European Union’s Article 17 on copyright content moderation on YouTube. <em>Policy &amp; Internet</em>.</li>
@@ -387,7 +324,6 @@
 
     <section id="cv">
       <h2>CV snapshot</h2>
-
       <div class="two-col">
         <div class="card">
           <h3>Education</h3>
@@ -422,7 +358,7 @@
       <div class="card">
         <p style="margin:0;">
           Email: <a href="mailto:dergache@uni-bremen.de">dergache@uni-bremen.de</a><br/>
-          LinkedIn: <a href="https://www.linkedin.com/in/daria-dergacheva-32710310/">https://www.linkedin.com/in/daria-dergacheva-32710310/</a>
+          LinkedIn: <a href="https://www.linkedin.com/in/daria-dergacheva-32710310/">linkedin.com/in/daria-dergacheva-32710310</a>
         </p>
       </div>
     </section>
@@ -430,12 +366,4 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="small">© <span id="y"></span> Daria Dergacheva · Hosted on GitHub Pages</div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+      <div class="small">© <span id="y"></span> Daria Dergacheva · Hosted on Git
